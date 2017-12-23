@@ -37,7 +37,7 @@ DB_PASS=${DB_PASS:-${db_password}}
 
 [ ! -d "./${DB_NAME}" ] && mkdir -p "./${DB_NAME}"
 
-
+#   -s        "public" \
 # -hq           :ハイクオリティモード。出力結果がきれいになる！
 # -noimplied    :「外部キーがない既存テーブル間の関連を推測し、ER図に反映してくれる」機能をOFFにする
 java \
@@ -49,7 +49,7 @@ java \
   -dp       "${JDBC_DRIVER_PATH}" \
   -t        "${DATABASE_TYPE}" \
   -host     "${DB_HOST}" \
-  -s        "public" \
+  -s        "${DB_NAME}" \
   -db       "${DB_NAME}" \
   -u        "${DB_USER}" \
   -p        "${DB_PASS}" \
