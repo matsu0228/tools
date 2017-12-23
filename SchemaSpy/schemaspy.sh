@@ -16,6 +16,16 @@ eval $(sed -e 's/[[:space:]]*\=[[:space:]]*/=/g' \
   | sed -n -e "/^\[$2\]/,/^\s*\[/{/^[^;].*\=.*/p;}")
 }
 
+if [ ! -f "./db.ini" ]; then
+  echo -e "Please set ./db.ini (your database's infomation)
+    echo -e '[database]
+    db_host=(your IP or host)
+    db_user=(login user)
+    db_password=(login passward)
+    db_name=(database naem)
+  "
+fi
+
 # usage
 ini_parser db.ini database
 echo ${db_host}
