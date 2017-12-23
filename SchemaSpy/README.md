@@ -53,4 +53,8 @@ $ sudo wget http://jaist.dl.sourceforge.net/project/schemaspy/schemaspy/SchemaSp
 
 # 2. PostgreSQL に接続するためのJDBCドライバ
 $ sudo wget https://jdbc.postgresql.org/download/postgresql-9.4.1212.jar
+
+# driver for mysql (ref: https://sourceforge.net/p/schemaspy/discussion/462850/thread/f4d1d707/)
+https://dev.mysql.com/downloads/connector/j/5.1.html
+
 ```
